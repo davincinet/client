@@ -1,6 +1,35 @@
 ChangeLog
 =========
 
+version 2.6.0 (2019-02-??)
+(last update on e87660ba28c95fe2462d58f901b8d2492521c57d)
+* Sync: Introduce experimental capability to sync file deltas. (#179)
+* Sync: Rewrote discovery code for performance improvements and better maintainability.
+* Sync: Don't abort on 503 errors (#5088, #5859)
+* Sync: Fix downloading of files when the database is used for local discovery
+* Sync: Better detection of complex renames
+* Sync: Handle blacklisted_files server capability (#434)
+* Sync: Fix sync progress when virtual files are created (#6933)
+* Vfs: Introduce experimental native virtual files mode for Windows 10.
+* Vfs: Improvements to UI around marking folders as available locally or online only. The setting also applies to new remote files now.
+* Vfs: Introduce actions and warning text for switching vfs on and off.
+* GUI: Added action to open folder in browser to selective sync context menu (#6471)
+* GUI: Add server version info to SSL info button (#6628)
+* GUI: Allow log window of running client to be opened via command line
+* GUI: Introduce conflict resolution actions to right-click menu of conflicts and files in read-only directories (#6252)
+* Updater: Show a nicer version string In the "available update" notification (#6602)
+* Updater: Set correct state on network error (#3933)
+* DB: Database path for new folders now starts with ".sync_", avoiding the "._" (#5904)
+* File hashes: Add support for SHA256 and SHA3
+* Log: Don't write to logdir if --logfile is passed (#6909)
+* Log: Make --logfile - work on Windows
+* Build: Fix KDEInstallDirs deprecation warnings (#6922)
+* Build: Fixes for compiling on "remarkable" tablet (#6870)
+* Remove support for Shibboleth auth (#6451)
+* Several performance optimizations
+* Many test improvements (like #6358)
+
+
 version 2.5.2 (2019-02-??)
 * Crash fix: On OSX when opening settings dialog (#6930)
 * Crash fix: When deleting an account (#6893)
