@@ -566,4 +566,9 @@ bool Theme::showVirtualFilesOption() const
     return ConfigFile().showExperimentalOptions();
 }
 
+bool Theme::noPreFlight() const
+{
+    return false;
+}
+
 } // end namespace client
